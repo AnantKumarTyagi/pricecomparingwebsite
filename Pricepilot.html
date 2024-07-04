@@ -1,0 +1,223 @@
+<html>
+<head>
+<meta name="Website" content="Web Development"/>
+<meta name="description" content="Price Comparison Website"/>
+<meta charset="utf-8"/>
+<meta name="keywords" content="HTML,CSS,JS,Price Comparison"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Price Pilot</title>
+<link rel="stylesheet" href="pp.css">
+<link href="img/logo.jpg" rel="icon" type="image/x-icon" alt="Logo" />
+</head>
+
+<body background="img/background.jpg">
+    <header>
+        <center>
+        <nav id="navbar"> 
+            <div id="logo">
+                <img src="img/logo.jpg" alt="Price Pilot">
+            </div>
+
+              <ul>
+            <li> <a href="">   Home</a> </li>
+            <li> <a href=""> Services </a> </li>
+            <li> <a href="" > About Us</a> </li>
+            <li> <a href=""> Contact Us </a> </li>
+        </nav>
+        <br>
+        <br>
+
+      <img src="img/pricepilot.jpg"alt="Price Pilot" width="450px"/> 
+    <br>
+    <hr length="100px" height="100px" width="1000px" color="seablue"/>
+    <br>
+
+    <form action="TV.py" target="_blank" id="search-form">
+     <input type="text" id="search-input" 
+            placeholder="What are you looking for..." style="width:450px; height:40px; border-radius: 11px; letter-spacing: 2px; 
+            font-size: 16px;"/>
+            <button type="submit" style="width:70px;height:40px; border-radius: 11px; background-color: lightblue;">
+             Search </button> <br>
+            <br>
+            <br>
+    </form>
+
+    </header>
+    </center>
+    <h1><b><u> Popular Categories: </u></b></h1>
+    <br>
+    <br>
+    <br>
+
+    <div class="box1"> <a href="TV.py" target="_blank">
+    <img id="first" src="img/tv.jpg" width="130px" />  </a>
+    </div>    
+    
+    <div class="box2"> <a href="a"> 
+    <img id="second" src="img/Laptop.jpg" width="130px"/>  </a>
+    </div>
+
+    <div class="box3" >  <a href="a">
+    <img id="third" src="img/AC.jpg" width="130px"/>   </a>
+    </div>
+
+    <div class="box4">   <a href="a">
+    <img id="fourth" src="img/Phone.jpg" width="100px"  />   </a>   
+    </div>
+
+    <div class="box6">   <a href="a">
+        <img id="fourth" src="img/Geyser.jpg" width="95px"/>   </a>   
+        </div>
+    
+    <div class="box5">   <a href="a">
+    <img id="fourth" src="img/headphone.jpg" width="100px"/>   </a>   
+    </div>
+
+    
+    <div class="box7">   <a href="a">
+    <img id="fourth" src="img/Watch.jpg" width="100px"/>   </a>   
+    </div>
+
+    <div class="box8">   <a href="a">
+    <img id="fourth" src="img/refrig.jpg" width="100px"/>   </a>   
+    </div>
+
+    <div class="box9">   <a href="a">
+    <img id="fourth" src="img/wash.jpg" width="90px"/>   </a>   
+    </div>
+
+    <div class="box10">   <a href="a">
+    <img id="fourth" src="img/fan.jpg" width="135px" height="82px"/>   </a>   
+
+    </div>
+
+    <footer>
+    <br>
+    <hr length="260px" width="1300px" color="seablue">
+     <p> <h3> At Price Pilot, we strive to provide you with the most comprehensive and up-to-date information on prices,
+         ensuring you make informed purchasing decisions.Discover unbeatable prices on a wide range of products.
+          Our dedicated team tirelessly scours the web to bring you the most competitive offers, saving you time and money on
+          your next purchase. </h3> </p>   
+
+          <p><h3> Shop smart with Price Pilot. Whether you're hunting for the lowest prices on electronics,
+              or home goods, our platform offers a hassle-free way to compare prices from leading retailers,
+              helping you secure the best value for your money. </h3></p>
+
+              <p><h3>Empower your shopping experience with Price Pilot. With our transparent price comparisons and detailed product
+                 insights, you can confidently navigate the market and find the perfect deal tailored to your needs and budget.</h3></p>
+    </footer>
+    <script>
+        // Populate popular categories
+        window.onload = function() {
+            var popularCategories = document.getElementById("popular-categories");
+
+            // Sample data of popular categories
+            var categories = [
+                { name: "TV", imgSrc: "img/tv.jpg" },
+                { name: "Laptop", imgSrc: "img/Laptop.jpg" },
+                { name: "AC", imgSrc: "img/AC.jpg" },
+                { name: "Phone", imgSrc: "img/Phone.jpg" },
+                { name: "Geyser", imgSrc: "img/Geyser.jpg" },
+                { name: "Headphone", imgSrc: "img/headphone.jpg" },
+                { name: "Watch", imgSrc: "img/Watch.jpg" },
+                { name: "Refrigerator", imgSrc: "img/refrig.jpg" },
+                { name: "Washing Machine", imgSrc: "img/wash.jpg" },
+                { name: "Fan", imgSrc: "img/fan.jpg" }
+            ];
+
+            categories.forEach(function(category) {
+                var div = document.createElement("div");
+                div.className = "box";
+                var a = document.createElement("a");
+                a.href = "a";
+                var img = document.createElement("img");
+                img.src = category.imgSrc;
+                img.width = 130;
+                a.appendChild(img);
+                div.appendChild(a);
+                popularCategories.appendChild(div);
+            });
+        };
+        // Search functionality
+const searchInput = document.getElementById('search-input');
+const productList = document.querySelectorAll('.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10');
+
+searchInput.addEventListener('input', function() {
+    const searchTerm = searchInput.value.toLowerCase();
+
+    productList.forEach(product => {
+        const productName = product.textContent.toLowerCase();
+        if (productName.includes(searchTerm)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+});
+// Pagination
+const pageSize = 5; // Number of products per page
+const totalPages = Math.ceil(productList.length / pageSize);
+let currentPage = 1;
+
+function displayPage(pageNumber) {
+    const startIndex = (pageNumber - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+
+    productList.forEach((product, index) => {
+        if (index >= startIndex && index < endIndex) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+function nextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        displayPage(currentPage);
+    }
+}
+
+function previousPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        displayPage(currentPage);
+    }
+}
+// Modal Windows and Popovers
+const modalButton = document.getElementById('modal-button');
+const modal = document.getElementById('modal');
+const closeButton = document.getElementById('close-button');
+
+modalButton.addEventListener('click', function() {
+    modal.style.display = 'block';
+});
+
+closeButton.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+});
+// Form Validation
+const form = document.getElementById('search-form');
+const searchinput = document.getElementById('search-input');
+
+form.addEventListener('submit', function(event) {
+    if (searchInput.value.trim() === '') {
+        event.preventDefault();
+        // Display error message for empty search input
+    }
+});
+
+
+
+        </script>
+</body>
+
+</html>

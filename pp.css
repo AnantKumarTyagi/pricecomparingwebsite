@@ -1,0 +1,242 @@
+h1{
+       font-family: 'Courier New', Courier, monospace;
+       font-size: 60px;
+       text-align: center;
+   }
+   
+   body{
+      background-size: cover;
+      background-attachment: fixed;
+   }
+   
+   #logo img{
+       height: 35px;
+       padding-left: 30px;
+       margin: 10px 10px;
+   }
+   #navbar{
+       display: flex;
+     background-color: lightblue;
+     border-radius: 13px;
+     align-items: center;
+   }
+   #navbar ul{
+       overflow: auto;
+   }
+   #navbar li{
+       float: left;
+       list-style: none;
+       margin: 3px 20px;
+   }
+   #navbar li a{
+       padding: 43px;
+       text-decoration: none;
+       font-family: Arial, Helvetica, sans-serif;
+       color: rgb(6, 6, 22);
+   }
+   
+   
+   .box1{
+       background-color: white;
+       border: solid lightblue;
+       border-radius: 20px;
+       border-width: 3.5px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 150px;
+       margin-bottom: 90px;
+   }
+   
+   .box1::after{
+       content: 'Televisions';
+       font-size: x-large;
+       text-align: center;
+   }
+   
+   
+   .box2{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 30px;
+       margin-bottom: 90px;
+   }
+   
+   .box2::after{
+       content: 'Laptops';
+       align-content: center;
+       font-size: x-large;
+   }
+   
+   
+   .box3{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 30px;
+       margin-bottom: 90px;
+   }
+   
+   .box3::after{
+       content: 'Air Conditioners';
+       align-content: center;
+       font-size: large;
+   }
+   
+   
+   .box4{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 30px;
+       margin-bottom: 90px;
+   }
+   
+   .box4::after{
+       content: 'Smartphones';
+       align-content: center;
+       font-size: x-large;
+   }
+   
+   
+   .box5{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 150px;
+       margin-bottom: 90px;
+   }
+   
+   .box5::after{
+       content: 'Headphones & Speakers';
+       align-content: center;
+       font-size: largeer;
+   }
+   
+   
+   .box6{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 30px;
+       margin-bottom: 90px;
+   }
+   
+   .box6::after{
+       content: 'Geysers';
+       align-content: center;
+       font-size: x-large;
+   }
+   
+   .box7{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 30px;
+       margin-bottom: 90px;
+   }
+   
+   .box7::after{
+       content: 'Smartwatches';
+       align-content: center;
+       font-size: x-large;
+   }
+   
+   .box8{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 30px;
+       margin-bottom: 90px;
+   }
+   
+   .box8::after{
+       content: 'Refrigerators';
+       align-content: center;
+       font-size: x-large;
+   }
+   
+   .box9{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 130px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 30px;
+       margin-bottom: 90px;
+   }
+   
+   .box9::after{
+       content: 'Washing Machines';
+       align-content: center;
+       font-size: large;
+   }
+   
+   .box10{
+       background-color: white;
+       border: solid lightblue;
+       border-width: 3.5px;
+       border-radius: 20px;
+       padding: 5px;
+       width: 135px;
+       height: 120px;
+       display: inline-block;
+       margin-right: 80px;
+       margin-left: 30px;
+       margin-bottom: 90px;
+   }
+   
+   .box10:after{
+       content: 'Cooling Appliances';
+       align-content: center;
+       font-size: large;
+   }
